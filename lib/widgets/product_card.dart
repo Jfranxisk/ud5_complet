@@ -48,7 +48,6 @@ class ProductCard extends StatelessWidget {
 
 class _BackgroudWidget extends StatelessWidget {
   final String? url_image; 
-
   const _BackgroudWidget({
     Key? key, 
     required this.url_image,
@@ -61,7 +60,7 @@ class _BackgroudWidget extends StatelessWidget {
       child: Container(
         width: double.infinity,
         height: 400,
-        child: url_image == null 
+        child: url_image == null || url_image == ''
           ? Image(
               image: AssetImage('assets/no-image.png'),
               fit: BoxFit.cover,

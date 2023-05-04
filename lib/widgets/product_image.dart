@@ -39,7 +39,7 @@ class ProductImage extends StatelessWidget {
             )
           ]);
   Widget getImage(String? picture) {
-    if(picture == null) {
+    if(picture == null || picture == "") {
       return Image(
         image: AssetImage('assets/no-image.png'),
         fit: BoxFit.cover,
